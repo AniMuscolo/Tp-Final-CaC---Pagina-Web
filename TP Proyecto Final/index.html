@@ -1,119 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo4-pag.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
     <title>Planes de Entrenamiento Online</title>
 </head>
+
 <body>
     <!-- Encabezado -->
-    <header>
-        <!-- Aca en el header ademas del titulo estaría bueno despues poner un lindo fondo cuando veamos css para que se diferencie del resto de la pagina y ademas hay que agregar los hipervinculos en la barra que digan "Inicio" o "Home", "quienes somos" o "Sobre nosotros", "planes", "contacto" y el carrito y si queremos una lupita para busqueda, pero no se como se hace aun -->
-        <nav>
-            <h1 id ="titulo-pagina">Fitness 360</h1> <!--Puse cualquier título, despues lo podemos cambiar -->
-          <!-- logo -->
-            <div id="logo">
-              <!-- esto lo copie de lo que hizo la profe en clase, para q despues agregemos un logo o icono. Si de ultima no va después lo sacamos -->
-            </div>
-          <!-- Hipervinculos para el menu -->
-            <ul>
-                <li>
-                    <a href= "#"> Inicio</a>
-                </li>
-                <li>
-                    <a href= "/quienes-somos.html"> Quienes somos</a>
-                </li>  
-                <li>
-                    <a href="#"><span>Planes online</span></a>
-                </li>
-                <li>
-                    <a href="#">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+    <header class="header">
+        <section class="header-info">
+            <p>Tu momento es ahora. Empieza tus nuevos hábitos HOY. Anímate y contáctanos!</p>
+        </section>
+        <section class="navbar-container">
+            <nav class="navbar-header">
+                <div id="navbar-logo">
+                    <!-- logo -->
+                    <a href="/" class="portada-logo">
+                        <img src="/images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="250">
+                        </img>
+                </div>
+                <!-- Hipervinculos para el menu -->
+                <div class="navbar-links">
+                    <ul class="navbar-list">
+                        <li class="nav-item"><a href="#"> Inicio</a></li>
+                        <li class="nav-item"><a href="#"> Quienes somos</a></li>
+                        <li class="nav-item"><a href="#">Planes online</a></li>
+                        <li class="nav-item"><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
     </header>
 
-<!-- Plan Bronce -->
-<div class="plan">
-    <h2 id ="subtitulo-planes">Plan Bronce</h2>
-    <!-- Acá iría la foto del Plan Bronce -->
-    <p>
-        - Programa de 4 semanas<br>
-        - Rutina de Entrenamiento personalizada y dinámica<br>
-        - Adaptada a tus necesidades y nivel de entrenamiento<br>
-        - Opción para hacer en casa o gimnasio<br>
-        - Guía de ejercicios por PDF
-    </p>
-    <button onclick="location.href='plan-bronce.html';">Ver más</button>
-</div>
+    <!-- Contenido -->
+    <main>
+        <section class="quienes-somos">
+            <!-- Descripción de quienes somos-->
+            <!-- Aca iría alguna foto o imagen o fondo -->
+            <div class="quienes-somos-container">
+                <h2 class="quienes-somos-subtitle">Quienes somos</h2><br><br>
+                <p class="quienes_somos_parrafo">
+                    Somos un equipo de profesionales dedicado a promover la salud y el bienestar a través del ejercicio
+                    y la nutrición. <br> <br>
+                    Nuestra misión es brindarte las herramientas necesarias para alcanzar un estilo de vida saludable y
+                    activo y que puedas mantenerlo a lo largo del tiempo. <br> <br>
+                    Nos especializamos en ofrecer asesoramiento personalizado con una variedad de planes diseñados para
+                    todas las edades que puedan adaptarse a tus metas, nivel de experiencia y preferencias individuales.
+                    <br> <br>
+                    Por todo esto es que estamos comprometidos en guiarte y ayudarte a adoptar hábitos saludables que
+                    perduren en el tiempo y te hagan sentir bien en cuerpo y mente. <br> <br>
+                    ¿Empezamos?
+                </p> <!-- Podemos agregar más cosas acá en el quienes somos, puse esto para rellenar un poco -->
+            </div>
+            <br><br><br>
+            <!-- por ahora puse br a todo para hacer espacios, pero despues vemos con qué nos hace trabajar la profesora -->
+        </section>
 
-<!-- Plan Plata -->
-<div class="plan">
-    <h2 id ="subtitulo-planes">Plan Plata</h2>
-    <!-- Acá iría la foto del Plan Plata -->
-    <p>
-        - Programa de 4 semanas<br>
-        - Rutina de Entrenamiento personalizada y dinámica<br>
-        - Adaptada a tus necesidades y nivel de entrenamiento<br>
-        - Opción para hacer en casa o gimnasio<br>
-        - Guía de ejercicios por PDF y video<br>
-        - Plan de suplementación deportiva (opcional)<br>
-        - Acceso a plataforma online y chat con tu coach
-    </p>
-    <button onclick="location.href='plan-plata.html';">Ver más</button>
-</div>
+        <section id="planes">
+            <!-- Plan Bronce -->
+            <div class="plan-container">
+                <h2 id="plan-subtitulo">Plan Bronce</h2><br><br>
+                <img src="/images/foto 2.jpg" alt="foto plan bronce" height="300">
+                <!-- Acá iría la foto del Plan Bronce -->
+                <p class="descripcion-items">
+                    - Programa de 4 semanas<br>
+                    - Rutina de Entrenamiento personalizada y dinámica<br>
+                    - Adaptada a tus necesidades y nivel de entrenamiento<br>
+                    - Opción para hacer en casa o gimnasio<br>
+                    - Guía de ejercicios por PDF
+                </p>
+                <br>
+                <button class="btn-planes" onclick="location.href='plan-bronce.html';">+ Info</button>
+                <!-- la idea seria que cuando hagan click los lleve a otra pestaña para acceder a agregar el plan al carrito y comprarlo -->
+                <br><br><br>
+                <!-- por ahora puse br a todo para hacer espacios, pero despues vemos con qué nos hace trabajar la profesora -->
+            </div>
 
-<!-- Plan Oro -->
-<div class="plan">
-    <h2 id ="subtitulo-planes">Plan Oro</h2>
-    <!-- Acá iría la foto del Plan Oro -->
-    <p>
-        - Programa de 8 semanas<br>
-        - Rutina de Entrenamiento personalizada y dinámica<br>
-        - Adaptada a tus necesidades y nivel de entrenamiento<br>
-        - Rutina de estiramiento<br>
-        - Opción para hacer en casa o gimnasio<br>
-        - Guía de ejercicios por PDF y video<br>
-        - Plan de suplementación deportiva (opcional)<br>
-        - Plan nutricional personalizado con opción vegana/vegetariana<br>
-        - Acceso a plataforma online y chat con tu coach y nutricionista
-    </p>
-    <button onclick="location.href='plan-oro.html';">Ver más</button>
-</div>
+            <!-- Plan Plata -->
+            <div class="plan-container">
+                <h2 id="plan-subtitulo">Plan Plata</h2><br><br>
+                <img src="/images/foto 3.jpg" alt="foto plan plata" height="300">
+                <!-- Acá iría la foto del Plan Plata -->
+                <p class="descripcion-items">
+                    - Programa de 4 semanas<br>
+                    - Rutina de Entrenamiento personalizada y dinámica<br>
+                    - Adaptada a tus necesidades y nivel de entrenamiento<br>
+                    - Opción para hacer en casa o gimnasio<br>
+                    - Guía de ejercicios por PDF y video<br>
+                    - Plan de suplementación deportiva (opcional)<br>
+                    - Acceso a plataforma online y chat con tu coach
+                </p>
+                <br>
+                <button class="btn-planes" onclick="location.href='plan-plata.html';">+ Info</button>
+                <br><br><br>
+                <!-- por ahora puse br a todo para hacer espacios, pero despues vemos con qué nos hace trabajar la profesora -->
+            </div>
 
-<!-- Plan Platino -->
-<div class="plan">
-    <h2 id ="subtitulo-planes">Plan Platino</h2>
-    <!-- Acá iría la foto del Plan Platino -->
-    <p>
-        - Programa de 12 semanas<br> <!-- Puse br para los espacios pero la profe dijo que vamos a usar otra cosa, asi que despues lo cambiamos -->
-        - Rutina de Entrenamiento personalizada y dinámica<br>
-        - Adaptada a tus necesidades y nivel de entrenamiento<br>
-        - Rutina de estiramiento<br>
-        - Opción para hacer en casa o gimnasio<br>
-        - Guía de ejercicios por PDF y video<br>
-        - Plan de suplementación deportiva (opcional)<br>
-        - Plan nutricional personalizado con opción vegana/vegetariana<br>
-        - Acceso a la plataforma online y chat con tu coach y nutricionista<br>
-        - Soporte semanal con contacto diario<br>
-        - Revisión del plan cada 15 días<br>
-        - Acceso a chat grupal con otros participantes
-    </p>
-    <button onclick="location.href='plan-platino.html';">Ver más</button>
-</div>
+            <!-- Plan Oro -->
+            <div class="plan-container">
+                <h2 id="plan-subtitulo">Plan Oro</h2><br><br>
+                <img src="/images/foto 5.jpg" alt="foto plan oro" height="300">
+                <!-- Acá iría la foto del Plan Oro -->
+                <p class="descripcion-items">
+                    - Programa de 8 semanas<br>
+                    - Rutina de Entrenamiento personalizada y dinámica<br>
+                    - Adaptada a tus necesidades y nivel de entrenamiento<br>
+                    - Rutina de estiramiento<br>
+                    - Opción para hacer en casa o gimnasio<br>
+                    - Guía de ejercicios por PDF y video<br>
+                    - Plan de suplementación deportiva (opcional)<br>
+                    - Plan nutricional personalizado con opción vegana/vegetariana<br>
+                    - Acceso a plataforma online y chat con tu coach y nutricionista
+                </p>
+                <br>
+                <button class="btn-planes" onclick="location.href='plan-oro.html';">+ Info</button>
+                <br><br><br>
+                <!-- por ahora puse br a todo para hacer espacios, pero despues vemos con qué nos hace trabajar la profesora -->
+            </div>
 
-<footer>
-    <p>&copy; 2024 Fitness 360</p>
-    <!-- Despues acá habría que agregar contacto, redes sociales y todo eso. Puse esto para que quede algo pero despues lo cambiamos -->
+            <!-- Plan Platino -->
+            <div class="plan-container">
+                <h2 id="plan-subtitulo">Plan Platino</h2><br><br>
+                <img src="/images/foto 11.jpg" alt="foto plan platino" height="300">
+                <!-- Acá iría la foto del Plan Platino -->
+                <p class="descripcion-items">
+                    - Programa de 12 semanas<br>
+                    <!-- Puse br para los espacios pero la profe dijo que vamos a usar otra cosa, asi que despues lo cambiamos -->
+                    - Rutina de Entrenamiento personalizada y dinámica<br>
+                    - Adaptada a tus necesidades y nivel de entrenamiento<br>
+                    - Rutina de estiramiento<br>
+                    - Opción para hacer en casa o gimnasio<br>
+                    - Guía de ejercicios por PDF y video<br>
+                    - Plan de suplementación deportiva (opcional)<br>
+                    - Plan nutricional personalizado con opción vegana/vegetariana<br>
+                    - Acceso a la plataforma online y chat con tu coach y nutricionista<br>
+                    - Soporte semanal con contacto diario<br>
+                    - Revisión del plan cada 15 días<br>
+                    - Acceso a chat grupal con otros participantes
+                </p>
+                <br>
+                <button class="btn-planes" onclick="location.href='plan-platino.html';">+ Info</button>
+                <br><br><br>
+            </div>
+        </section>
+    </main>
 
-<!-- Script para agregar al carrito. Lo pongo para ver como quedaría pero más adelante vemos mejor eso -->
- <!-- todavia ni cree el carrito porque ni vimos javascript pero lo pongo para probar como queda -->
-<!-- <script> 
-    function agregarAlCarrito(plan) {
-        console.log("Plan agregado al carrito:", plan);
-    }
-</script> -->
-</footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <h2 class="footer-title">Contáctanos</h2><br><br>
+            <!--la idea que tenia es que este contactanos sea un boton que dirija directamente a los contactos tipo redes sociales, whatsapp, mail, etc -->
+        </div>
+        <!-- Despues acá habría que agregar contacto, redes sociales y todo eso. Puse esto para que quede algo pero despues lo cambiamos -->
+        <div class="footer-icons">
+            <a href="https://facebook.com/" class="boton-facebook"> <a><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" class="boton-twitter"> <a><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://whatsapp.com" class="boton-whatsapp"><a><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p> © 2024 Fitness 360 - Todos los derechos reservados</p>
+        </div>
 
+        <div class="footer-div">
+            <nav class="footer-nav">
+                <a href="#" class="footer_nav">Inicio</a>
+                <a href="#" class="footer_nav">Quienes Somos</a>
+                <a href="#" class="footer_nav">Planes</a>
+                <a href="#" class="footer_nav">Contacto</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
