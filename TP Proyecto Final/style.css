@@ -1,9 +1,11 @@
 :root{
     --bg-color:#eeddf4;
     --primary-color:#d298cc;
-    --secondary-color:#ffc098;
-    --third-color:rgb(194, 187, 198);
+    --secondary-color:#fedfcc;
+    --secondary-bis-color: #ed1dc0;
+    --third-color:rgb(230, 249, 242);
     --third-bis-color:#9c72a9f2;
+    --fourth-color: #4b20b1;
     --bg-input-color:rgba(41, 32, 49, 0.173);
 }
 
@@ -11,38 +13,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito',sans-serif;
 }
 
 body{
     background-color:var(--bg-color);
+    font-family: "Open Sans", sans-serif;
 }
+
+/* Estilos de Header y NavBar */
 
 .header-info{
     background-color: var(--third-bis-color);
     text-align: end;
+    overflow: hidden;
 }
 
 .header-info p{
     color: white;
     font-weight: 500;
     padding: 5px 25px 5px 0;
+    white-space: nowrap;
     animation: moveText 30s linear infinite;
 }
 
-.navbar-header{
-    background-color: var(--third-color);
+.navbar-container{
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.navbar-list{
-    display: flex;
+.navbar{
+    display: flex ;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+.contenedor{
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: -35px;
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img{
+    margin-right: 20px;
+}
+
+.navbar-links{
+    display: flex;
+    align-items: center;    
+}
+
+.navbar-links>*{
+    margin-left: 40px;    
+}
+
+.navbar-list{
     display: flex;
     list-style: none;
 }
@@ -61,6 +94,37 @@ a{
     position: relative;
 }
 
+.nav-item a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-bis-color);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav-item:hover a::after{
+    opacity: 1;
+}
+
+.search-icon img{
+    height: 22px;    
+}
+
+.navbar-toogle-boton{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-menu-movil{
+    display: none;
+}
+
 .btn-planes{
     background-color: var(--primary-color);
     padding: 10px 15px;
@@ -69,11 +133,199 @@ a{
     cursor: pointer;
 }
 
+
 @keyframes moveText {
     0% {
         transform: translateX(100%);
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/*Media Query - Responsividad*/
+@media only screen and (max-width:895px){
+    .navbar-list{
+        display: none;
+    }
+    .navbar-links>*{
+        margin-left: 20px;
+    }
+
+    .navbar-menu-movil{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:180px;
+        right: 0;
+        background-color: var(--secondary-color);
+        width: 100%;
+        box-shadow: 0 2px 10px rg(0,0,0,1);
+        z-index: 1;
+    }
+    .nav-item-movil{
+        margin-left: 40px;
+        font-size: 1.1em;
+        font-weight: 300;
+        margin-top: 5px;
+    }
+
+    .navbar-list-movil{
+        list-style: none;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .navbar-list-movil a{
+        color:var(--third-bis-color);
+        position: relative;
+    }
+
+    .nav-item-movil a::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--secondary-bis-color);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .nav-item-movil:hover a::after{
+        opacity: 1;
+    }
+
+    .navbar-toogle-boton{
+        display: block;
+        margin: 0;
+    }
+
+    .navbar-toogle-boton img{
+        height: 28px;
+        margin: 0 10px;
+    }
+}
+
+/*Estilos Footer y NavBar*/
+
+input {
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer{
+    background-color: var(--third-bis-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-info{
+    background-color: var(--secondary-color);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container{
+    max-width: 1440px;
+    padding: 0 20px;
+}
+
+.footer-info-lista-items{
+    list-style: none;
+}
+
+.footer-titulo{
+    color: var(--fourth-color);
+    font-size: 1.2em; 
+    margin-bottom: 1em;
+}
+
+.footer-info-items-li{
+    margin-bottom: 0.2em;
+}
+
+.footer-items-link{
+    font-size: 0.9em;
+}
+
+.footer-items-link:hover{
+    color: var(--secondary-bis-color);
+}
+
+.footer-iconos-contenedor{
+    margin-bottom: 1em;    
+}
+
+.icono-redsocial{
+    margin-right: 15px;
+}
+
+.icono-redsocial img{
+    height: 23px;
+}
+
+.suscribete-contenedor-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.suscribete-contenedor-form input{
+    /* border-color: var(--fourth-color); */
+    border: none;
+    font-size: 0.8em;
+    background-color:rgb(239, 233, 243);
+    padding: 12px;
+    outline: none;
+    color: var(--fourth-color);
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.boton-suscribete {
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: var(--fourth-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+.boton-suscribete:hover{
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.footer-copyright-texto{
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+/*Media querys footer*/
+
+@Media only screen and (max-width:850px){ /*si la pantalla es superior a esto que no aplique los estilos que siguen*/
+    .footer-info-lista{
+        width: 49%;
+        margin-bottom: 1.3em;
+    }
+}
+
+@Media only screen and (max-width:510px){ /*si la pantalla es superior a esto que no aplique los estilos que siguen*/
+    .footer-info-lista{
+        width: 100%;
+        margin-bottom: 1.3em;
     }
 }

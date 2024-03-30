@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/logo4-pag.png" type="image/x-icon">
     <link rel="stylesheet" href="/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <title>Descripcion Plan Platino</title>
 </head>
 
@@ -13,25 +18,44 @@
     <!-- Encabezado -->
     <header class="header">
         <section class="header-info">
-            <p>Tu momento es ahora. Empieza tus nuevos hábitos HOY. Anímate y contáctanos!</p>
+            <p>El mejor momento para cambiar tu vida es ahora. Empieza a crear tus nuevos hábitos HOY mismo! Anímate y
+                contáctanos!</p>
         </section>
         <section class="navbar-container">
-            <nav class="navbar-header">
-                <div id="navbar-logo">
-                    <!-- logo -->
-                    <a href="/" class="portada-logo">
-                        <img src="/images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="250">
-                        </img>
-                </div>
-                <!-- Hipervinculos para el menu -->
-                <div class="navbar-links">
-                    <ul class="navbar-list">
-                        <li class="nav-item"><a href="#"> Inicio</a></li>
-                        <li class="nav-item"><a href="#"> Quienes somos</a></li>
-                        <li class="nav-item"><a href="#">Planes online</a></li>
-                        <li class="nav-item"><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
+            <nav class="navbar contenedor">
+                <!-- logo -->
+                <a href="index.html" class="navbar-logo">
+                    <img src="/images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="250">
+                    </img>
+                    <!-- Hipervinculos para el menu -->
+                    <div class="navbar-links">
+                        <ul class="navbar-list">
+                            <li class="nav-item"><a href="#"> Inicio</a></li>
+                            <li class="nav-item"><a href="#"> Quienes somos</a></li>
+                            <li class="nav-item"><a href="#">Planes online</a></li>
+                            <li class="nav-item"><a href="#">Contacto</a></li>
+                        </ul>
+                        <form action="" class="navbar-search">
+                            <a href="#" class="search-icon">
+                                <img src="/images/img-lupa2.png" alt="boton de busqueda" height="35">
+                            </a>
+                        </form>
+                        <form action="" class="navbar-carrito"></form>
+                        <a href="#" class="carrito-icon">
+                            <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
+                        </a>
+                        <button class="navbar-toogle-boton">
+                            <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
+                        </button>
+                        <div class="navbar-menu-movil">
+                            <ul class="navbar-list-movil">
+                                <li class="nav-item-movil"><a href="#"> Inicio</a></li>
+                                <li class="nav-item-movil"><a href="#"> Quienes somos</a></li>
+                                <li class="nav-item-movil"><a href="#">Planes online</a></li>
+                                <li class="nav-item-movil"><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
             </nav>
         </section>
     </header>
@@ -49,35 +73,81 @@
                     inquietudes, recibir consejos personalizados y compartir experiencias con otros usuarios que
                     comparten tus objetivos. Únete y alcanza tus metas juntos!
                 </p>
-                <button class="btn-comprar-planes" onclick="agregarAlCarrito('platino')">Comprar Plan</button>
+                <button class="btn-comprar-planes" onclick="agregarAlCarrito('platino')">LO QUIERO</button>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-container">
-            <h2 class="footer-title">Contáctanos</h2><br><br>
-            <!--la idea que tenia es que este contactanos sea un boton que dirija directamente a los contactos tipo redes sociales, whatsapp, mail, etc -->
-        </div>
-        <!-- Despues acá habría que agregar contacto, redes sociales y todo eso. Puse esto para que quede algo pero despues lo cambiamos -->
-        <div class="footer-icons">
-            <a href="https://facebook.com/" class="boton-facebook"> <a><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com" class="boton-twitter"> <a><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://whatsapp.com" class="boton-whatsapp"><a><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-        <div class="footer-copyright">
-            <p> © 2024 Fitness 360 - Todos los derechos reservados</p>
-        </div>
+        <section class="footer-nav-info">
+            <div class="footer-nav-info container">
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Inicio</h3>
+                    <ul class="footer-info-lista-items">
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">¿Quieres trabajar con nosotros?</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">FAQ</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">Política de privacidad</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">Términos y condiciones</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link">Aviso Legal</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Quienes somos</h3>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Planes online</h3>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Testimonios</h3>
+                </article>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Contacto</h3>
+                </article>
 
-        <div class="footer-div">
-            <nav class="footer-nav">
-                <a href="#" class="footer_nav">Inicio</a>
-                <a href="#" class="footer_nav">Quienes Somos</a>
-                <a href="#" class="footer_nav">Planes</a>
-                <a href="#" class="footer_nav">Contacto</a>
-            </nav>
-        </div>
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Síguenos</h3>
+                    <div class="footer-iconos-contenedor">
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-facebook.png" alt="icono de facebook">
+                        </a>
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-instagram2.png" alt="icono de instagram">
+                        </a>
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-twitter.png" alt="icono de X-Twitter" height="16">
+                        </a>
+                        <a href="#" class="icono-redsocial">
+                            <img src="images/icono-youtube.png" alt="icono de youtube">
+                        </a>
+                    </div>
+
+                    <div class="suscribete-contenedor">
+                        <h3 class="footer-titulo">Suscribete al Newsletter</h3>
+                        <form action="" class="suscribete-contenedor-form">
+                            <input type="email" class="suscribete-contenedor-mail input" placeholder="Ingresa tu mail">
+                            <button type="submit" class="boton-suscribete button">Suscribirme</button>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="footer-copyright">
+            <p class="footer-copyright-texto" id="copyright">Copyright © 2024 Fitness 360 - Todos los derechos
+                reservados</p>
+        </section>
     </footer>
+
+    <script src="/app.js"></script>
 
 </body>
 
