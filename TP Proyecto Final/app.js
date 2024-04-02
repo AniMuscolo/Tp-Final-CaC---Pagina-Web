@@ -97,6 +97,6 @@ document.addEventListener("DOMContentLoaded", () =>{
         cambiarTestimonio(1, "testimonios-control-proximo");
     }
 
-    let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento,5000)
+    let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento,8000)
 
 });
